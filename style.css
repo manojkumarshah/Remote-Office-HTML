@@ -1,0 +1,814 @@
+/*
+Theme Name: Remote Office
+Theme URI: https://remoteoffice.manojkumarshah.com/
+Author: Manoj Kumar Shah
+Author URI: https://manojkumarshah.com/
+Description: Remote Office is a Custom theme build specially for Remote Office.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: custom-menu, featured-images, custom-fields
+Text Domain: remote-office
+*/
+
+/* Reset */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+input,
+textarea {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* End Reset */
+
+/* Required Fonts  */
+
+/* Google Fonts - Work Sans */
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap");
+
+/* Custom Fonts - Söhne */
+@import url('fonts/fonts.css');
+
+/* Start Global Styles */
+body {
+    font-family: 'Söhne', 'Work Sans', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #131415;
+    background: #F7F4EC;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.shop-notification-area {
+    width: 100%;
+    height: 32px;
+    background: var(--PRIMARY-FONT-GREY, #333);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.shop-notification {
+    color: #f7f4ec;
+    text-align: center;
+
+    /* Body */
+    font-family: Work Sans;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.26px;
+}
+
+.header-area {
+    font-family: 'Sohne';
+    font-weight: normal;
+    font-style: normal;
+    background: #F7F4EC;
+    height: auto;
+    width: auto;
+    padding: 26px 48px 25px 48px;
+    border-bottom: 1px solid #000;
+}
+
+.header-area .main-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-area .main-menu ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Custom styles for the header */
+
+.navbar-logo {
+    margin: 0 auto;
+}
+
+.header-area .mobile {
+    display: none;
+}
+
+.navbar-logo img {
+    width: auto;
+    height: 30px;
+    margin: 0 auto;
+    display: block;
+}
+
+.navbar-right-icons {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-right-icons a {
+    color: #000;
+    /* Change this to your preferred text color */
+    margin-left: 15px;
+}
+
+.search-icon {
+    cursor: pointer;
+    color: #000;
+}
+
+.search-box {
+    display: none;
+}
+
+@media (max-width: 576px) {
+
+    /* Show search box on small screens */
+    .search-box {
+        display: block;
+    }
+}
+
+/* End Custom styles for the header */
+
+/* Front Page  */
+
+/* Featured Product Section */
+.product-section {
+    border-bottom: 1px solid #000;
+}
+
+.product-section .thumbnail-area {
+    width: min-content;
+}
+
+.product-section .main-img {
+    border-right: 1px solid #000;
+}
+
+.product-section .detail-area {
+    padding: 60px;
+
+}
+
+.product-section .product-title {
+    font-family: 'Söhne';
+    color: var(--PRIMARY-FONT-GREY, #333);
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    padding: 16px 0;
+}
+
+.product-section .pro-cat a {
+    padding: 0 8px;
+    color: #333;
+}
+
+.product-section .product-description {
+    color: var(--PRIMARY-FONT-GREY, #333);
+    font-family: Söhne;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    /* 142.857% */
+    text-transform: capitalize;
+}
+
+.product-section .product-addtional-features .features {
+    color: var(--PRIMARY-FONT-GREY, #333);
+    font-family: Söhne;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    text-transform: capitalize;
+    padding: 20px 0;
+    border-bottom: 1px solid #DBDACF;
+}
+
+.product-section .product-addtional-features .features h2 {
+    padding-bottom: 10px;
+    font-weight: 600;
+}
+
+.product-section .product-action {
+    padding: 20px;
+}
+
+.product-section .product-action .title {
+    color: var(--PRIMARY-FONT-GREY, #333);
+    font-family: Söhne;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    /* 142.857% */
+    text-transform: capitalize;
+}
+
+.product-section .product-action button {
+    width: max-content;
+    height: auto;
+    flex-shrink: 0;
+    border-radius: 4px;
+    background: #FFF;
+    border: none;
+    margin: 16px;
+    vertical-align: middle;
+    padding: 16px;
+}
+
+.product-section .product-action button:hover {
+    background: #333;
+    color: #FFF;
+}
+
+.product-section .other-pay,
+.product-section .other-pay h2 {
+    padding: 16px 0;
+}
+
+hr {
+    border-top: 1px solid #52494A;
+
+}
+
+.product-section p {
+    color: #42423F;
+    font-family: Söhne;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    /* 133.333% */
+}
+
+.product-thumbnail {
+    width: 100%;
+    height: 100%;
+    border-right: 1px solid #000;
+}
+
+.product-thumbnail img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    vertical-align: bottom;
+    border-bottom: 1px solid #000;
+}
+
+.product-thumbnail img:hover {
+    opacity: 0.8;
+}
+
+.product-main-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-main-image img {
+    width: 100%;
+    height: 594px;
+    object-fit: cover;
+}
+
+/* End Featured Product Section */
+
+/* Start Key Ingredients Section  */
+
+.key-ingredients {
+    background: #fff;
+    padding: 50px 10px;
+}
+
+.key-ingredients .key-ingredients-slider-item-img img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+}
+
+.key-ingredients .key-ingredients-title h2 {
+    color: var(--PRIMARY-FONT-GREY, #333);
+    font-family: KudryashevDisplay;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    padding: 20px 100px;
+}
+
+.key-ingredients .key-ingredients-slider-item {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    padding: 12px;
+}
+
+.key-ingredients-slider-item-title h2 {
+    color: #000;
+    font-family: Söhne;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    /* 88.889% */
+    text-transform: capitalize;
+    padding: 12px 0;
+}
+
+.key-ingredients-slider-item-title p {
+    color: var(--LIGHT-FONT-GREY, #42423F);
+    font-family: Söhne;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    /* 150% */
+    text-transform: capitalize;
+}
+
+@media (max-width: 767px) {
+    .carousel-inner .carousel-item>div {
+        display: none;
+    }
+
+    .carousel-inner .carousel-item>div:first-child {
+        display: block;
+    }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+    display: flex;
+}
+
+/* medium and up screens */
+@media (min-width: 768px) {
+
+    .carousel-inner .carousel-item-end.active,
+    .carousel-inner .carousel-item-next {
+        transform: translateX(25%);
+    }
+
+    .carousel-inner .carousel-item-start.active,
+    .carousel-inner .carousel-item-prev {
+        transform: translateX(-25%);
+    }
+}
+
+.carousel-inner .carousel-item-end,
+.carousel-inner .carousel-item-start {
+    transform: translateX(0);
+}
+
+.key-ingredients-slider .card {
+    margin: 0 10px;
+    height: 800px;
+}
+
+/* End Key Ingredients Section   */
+
+/* Start Product Features Section  */
+
+.img-para-section {
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+
+.img-para-section img {
+    width: 100%;
+    height: 480px;
+    vertical-align: top;
+}
+
+.img-para-section .section-lr:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.img-para-section .section-lr .para {
+    padding: 88px;
+}
+
+.img-para-section .section-lr .para h2 {
+    color: #000;
+    font-family: Söhne;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    /* 142.857% */
+    text-transform: capitalize;
+    padding: 10px 0;
+}
+
+.img-para-section .section-lr .para p {
+    color: #19281F;
+    font-family: KudryashevDisplay;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 44px;
+    /* 137.5% */
+}
+
+
+/* End Product Features Section    */
+
+/* Start Related Products Section  */
+
+.related-sction {
+    background: #F7F4EC;
+    padding: 70px 0px;
+}
+
+.related-sction .related-section-slider-item {
+    padding: 0 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.related-sction .related-sction-title h2 {
+    color: var(--PRIMARY-FONT-GREY, #333);
+    font-family: KudryashevDisplay;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    /* 100% */
+}
+
+.related-sction .related-section-slider-item img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+
+}
+
+.related-sction .price {
+    color: #000;
+    font-family: Söhne;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    /* 123.077% */
+    text-transform: capitalize;
+    text-align: right;
+}
+
+.related-sction h2.title {
+    color: #000;
+    font-family: Söhne;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    /* 88.889% */
+    text-transform: capitalize;
+    padding: 5px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.related-sction p.description {
+    color: #000;
+    font-family: Söhne;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    /* 123.077% */
+    text-transform: capitalize;
+}
+
+/* End Related Products Section     */
+
+/* END Front Page   */
+/* Start Footer */
+
+.footer-area {
+    background: #fff;
+}
+
+.footer-area .top-section {
+    border-top: 1px solid #000;
+}
+
+.footer-area .bottom-section {
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+
+.footer-area .left-section {
+    border-right: 1px solid #000;
+    padding: 0;
+}
+
+.footer-logo img {
+    width: auto;
+    height: 30px;
+    margin: 0 auto;
+    display: block;
+}
+
+.footer-widget {
+    border-right: 1px solid #000;
+    padding: 10px;
+}
+
+.footer-widget-title {
+    color: var(--LIGHT-FONT-GREY, #42423F);
+    font-family: Söhne;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    /* 80% */
+    text-transform: uppercase;
+    padding: 15px 0;
+    border-bottom: 1px solid #333;
+}
+
+.footer-widget p,
+.footer-widget ul li a {
+    color: var(--LIGHT-FONT-GREY, #42423F);
+    font-family: Söhne;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    padding: 10px 0;
+}
+
+.footer-area .menu-section {
+    border-bottom: 1px solid #000;
+}
+
+.footer-bottom {
+    justify-content: space-between;
+}
+
+.newsletter {
+    padding: 30px;
+}
+
+.newsletter .title {
+    color: var(--LIGHT-FONT-GREY, #42423F);
+    font-family: KudryashevDisplay;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    padding: 20px 0;
+}
+
+.newsletter .descrition {
+    color: var(--LIGHT-FONT-GREY, #42423F);
+    font-family: Söhne;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.newsletter form button,
+.newsletter form button:hover {
+    background: #333;
+    color: #F7F4EC;
+    font-family: Söhne;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    /* 114.286% */
+}
+
+.sidecart {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 999;
+    width: 100%;
+    height: -webkit-fill-available;
+}
+
+.sidecart .open {
+    display: flex;
+}
+
+.sidecart .col-md-8 {
+    background: #42423F;
+    opacity: 0.4;
+}
+
+.sidecart .col-md-4 {
+    background: #F7F4EC;
+    padding: 45px;
+}
+
+.sidecart__title {
+    color: var(--PRIMARY-FONT-GREY, #333);
+    font-family: inherit;
+    font-size: 31px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+}
+
+.sidecart__close {
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    background: #333;
+    border: 1px solid #333;
+}
+
+.sidecart__close button {
+    border: none;
+    background: transparent;
+}
+
+.sidecart__close-btn i {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    color: #FFF;
+    background-color: transparent;
+}
+
+.sidecart__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* End Footer  */
+
+/* Responsive Design  */
+@media (max-width: 991.98px) {
+    .section-lr {
+        flex-direction: column-reverse;
+    }
+
+    .img-para-section .section-lr:nth-child(even),
+    .related-sction-slider {
+        flex-direction: column;
+    }
+
+    .product-thumbnail {
+        display: flex;
+    }
+
+    header .desktop {
+        display: none;
+    }
+
+    .header-area .mobile {
+        display: block;
+    }
+
+}
